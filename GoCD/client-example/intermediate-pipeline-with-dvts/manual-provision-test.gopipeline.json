@@ -1,5 +1,5 @@
 {
-  "name": "provision-test",
+  "name": "manual-provision-test",
   "environment_variables": [],
   "group" : "client-example-intermediate-state-with-dvts",
   "materials": [
