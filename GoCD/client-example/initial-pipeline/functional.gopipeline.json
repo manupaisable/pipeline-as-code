@@ -1,12 +1,12 @@
 {
-  "name": "functional",
+  "name": "functional-initial",
   "environment_variables": [],
   "group" : "client-example-initial-pipeline",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "integration",
+      "pipeline": "integration-initial",
       "stage": "integration"
     }
   ],

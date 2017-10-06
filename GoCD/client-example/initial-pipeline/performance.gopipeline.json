@@ -1,12 +1,12 @@
 {
-  "name": "performance",
+  "name": "performance-initial",
   "environment_variables": [],
   "group" : "client-example-initial-pipeline",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "functional",
+      "pipeline": "functional-initial",
       "stage": "functional"
     }
   ],

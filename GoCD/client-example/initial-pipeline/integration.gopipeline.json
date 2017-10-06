@@ -1,5 +1,5 @@
 {
-  "name": "integration",
+  "name": "integration-initial",
   "environment_variables": [],
   "group" : "client-example-initial-pipeline",
   "materials": [

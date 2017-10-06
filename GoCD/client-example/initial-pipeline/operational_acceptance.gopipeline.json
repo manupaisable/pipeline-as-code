@@ -1,12 +1,12 @@
 {
-  "name": "operational_acceptance",
+  "name": "operational_acceptance-initial",
   "environment_variables": [],
   "group" : "client-example-initial-pipeline",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "performance",
+      "pipeline": "performance-initial",
       "stage": "performance"
     }
   ],
