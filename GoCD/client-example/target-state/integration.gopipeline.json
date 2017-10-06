@@ -1,0 +1,76 @@
+{
+  "name": "integration",
+  "environment_variables": [],
+  "group" : "client-example-target-state",
+  "materials": [
+    {
+      "type": "dependency",
+      "name": "dependency",
+      "pipeline": "provision-test",
+      "stage": "provision-test"
+    }
+  ],
+  "stages": [
+    {
+      "name": "integration",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "integration",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "./build.sh",
+              "arguments": [],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "test",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "test",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "ls",
+              "arguments": [
+                "-l",
+                "."
+              ],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

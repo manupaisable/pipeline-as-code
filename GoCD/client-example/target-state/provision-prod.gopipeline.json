@@ -1,0 +1,47 @@
+{
+  "name": "provision-prod",
+  "environment_variables": [],
+  "group" : "client-example-target-state",
+  "materials": [
+    {
+      "type": "dependency",
+      "name": "dependency",
+      "pipeline": "performance",
+      "stage": "performance"
+    }
+  ],
+  "stages": [
+    {
+      "name": "provision-prod",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "provision-prod",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "ls",
+              "arguments": [
+                "-l",
+                "."
+              ],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
