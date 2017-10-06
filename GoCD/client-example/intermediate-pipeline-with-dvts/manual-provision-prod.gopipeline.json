@@ -1,5 +1,5 @@
 {
-  "name": "provision-prod",
+  "name": "manual-provision-prod",
   "environment_variables": [],
   "group" : "client-example-intermediate-state-with-dvts",
   "materials": [
