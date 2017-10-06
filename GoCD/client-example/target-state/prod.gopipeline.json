@@ -1,12 +1,12 @@
 {
-  "name": "prod",
+  "name": "prod-target",
   "environment_variables": [],
   "group" : "client-example-target-state",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "operational_acceptance",
+      "pipeline": "operational_acceptance-target",
       "stage": "operational_acceptance"
     }
   ],

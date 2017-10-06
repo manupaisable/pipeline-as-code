@@ -1,12 +1,12 @@
 {
-  "name": "functional-target",
+  "name": "functional",
   "environment_variables": [],
-  "group" : "client-example-target-state",
+  "group" : "client-example-intermediate-state-with-dvts",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "integration-target",
+      "pipeline": "integration",
       "stage": "integration"
     }
   ],

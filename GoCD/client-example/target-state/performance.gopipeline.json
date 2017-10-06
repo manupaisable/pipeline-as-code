@@ -1,12 +1,12 @@
 {
-  "name": "performance",
+  "name": "performance-target",
   "environment_variables": [],
   "group" : "client-example-target-state",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "functional",
+      "pipeline": "functional-target",
       "stage": "functional"
     }
   ],

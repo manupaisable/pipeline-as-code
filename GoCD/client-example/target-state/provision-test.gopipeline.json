@@ -1,5 +1,5 @@
 {
-  "name": "provision-test",
+  "name": "provision-test-target",
   "environment_variables": [],
   "group" : "client-example-target-state",
   "materials": [
@@ -10,7 +10,7 @@
   ],
   "stages": [
     {
-      "name": "provision-test",
+      "name": "provision-test-target",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,

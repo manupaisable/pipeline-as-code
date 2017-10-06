@@ -1,12 +1,12 @@
 {
-  "name": "provision-prod",
+  "name": "provision-prod-target",
   "environment_variables": [],
   "group" : "client-example-target-state",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "performance",
+      "pipeline": "performance-target",
       "stage": "performance"
     }
   ],

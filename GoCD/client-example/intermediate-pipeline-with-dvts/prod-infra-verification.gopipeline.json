@@ -1,25 +1,25 @@
 {
-  "name": "functional-target",
+  "name": "prod-infra-verification",
   "environment_variables": [],
-  "group" : "client-example-target-state",
+  "group" : "client-example-intermediate-state-with-dvts",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "integration-target",
-      "stage": "integration"
+      "pipeline": "manual-provision-prod",
+      "stage": "manual-provision-prod"
     }
   ],
   "stages": [
     {
-      "name": "functional",
+      "name": "prod-infra-verification",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
       "environment_variables": [],
       "jobs": [
         {
-          "name": "functional",
+          "name": "prod-infra-verification",
           "environment_variables": [],
           "tabs": [],
           "resources": [],
@@ -32,8 +32,11 @@
               "type": "exec",
               "run_if": "passed",
               "on_cancel" : null,
-              "command": "ls -la",
-              "arguments": [],
+              "command": "ls",
+              "arguments": [
+                "-l",
+                "."
+              ],
               "working_directory": null
             }
           ]

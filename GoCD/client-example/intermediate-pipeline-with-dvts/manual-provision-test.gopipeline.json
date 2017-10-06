@@ -1,25 +1,23 @@
 {
-  "name": "functional-target",
+  "name": "provision-test",
   "environment_variables": [],
-  "group" : "client-example-target-state",
+  "group" : "client-example-intermediate-state-with-dvts",
   "materials": [
     {
-      "type": "dependency",
-      "name": "dependency",
-      "pipeline": "integration-target",
-      "stage": "integration"
+      "url": "https://github.com/arvindsv/gocd-demo-config-repo-code",
+      "type": "git"
     }
   ],
   "stages": [
     {
-      "name": "functional",
+      "name": "manual-provision-test",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
       "environment_variables": [],
       "jobs": [
         {
-          "name": "functional",
+          "name": "manual-provision-test",
           "environment_variables": [],
           "tabs": [],
           "resources": [],
@@ -32,7 +30,7 @@
               "type": "exec",
               "run_if": "passed",
               "on_cancel" : null,
-              "command": "ls -la",
+              "command": "./build.sh",
               "arguments": [],
               "working_directory": null
             }

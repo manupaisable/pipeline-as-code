@@ -1,12 +1,12 @@
 {
-  "name": "integration",
+  "name": "integration-target",
   "environment_variables": [],
   "group" : "client-example-target-state",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "provision-test",
+      "pipeline": "provision-test-target",
       "stage": "provision-test"
     }
   ],
