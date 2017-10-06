@@ -32,8 +32,11 @@
               "type": "exec",
               "run_if": "passed",
               "on_cancel" : null,
-              "command": "./build.sh",
-              "arguments": [],
+              "command": "ls",
+              "arguments": [
+                "-l",
+                "."
+              ],
               "working_directory": null
             }
           ]
