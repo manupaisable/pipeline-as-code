@@ -1,0 +1,6 @@
+<config-repos>
+	<config-repo plugin="json.config.plugin">
+  		<git url="https://manupaisable@bitbucket.org/skeltonthatcher/pipeline.git" />
+	</config-repo>
+</config-repos>
+
