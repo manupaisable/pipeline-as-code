@@ -1,0 +1,107 @@
+{
+  "name": "prod-UK",
+  "environment_variables": [],
+  "group" : "01-current-pipeline-environment-driven",
+  "materials": [
+    {
+      "type": "dependency",
+      "name": "dependency",
+      "pipeline": "staging-UK",
+      "stage": "beta_tests"
+    }
+  ],
+  "stages": [
+    {
+      "name": "triggered",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "triggered",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "echo 'this is just to signal the start of this phase'",
+              "arguments": [],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "manual_deploy",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "approval": {
+          "type": "manual",
+          "users": [],
+          "roles": []
+      },
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "manual_deploy",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "echo 'manually trigger next stage when deploy finished'",
+              "arguments": [],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "smoke_tests",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "smoke_tests",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "ls -la .",
+              "arguments": [],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "CI",
+  "environment_variables": [],
+  "group" : "01-current-pipeline-environment-driven",
+  "materials": [
+    {
+      "url": "https://manupaisable:X,=Mkf4;K564m,@bitbucket.org/skeltonthatcher/pipeline.git",
+      "type": "git"
+    }
+  ],
+  "stages": [
+    {
+      "name": "sentinel_gate",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "sentinel_gate",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "ls -la .",
+              "arguments": [],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "acceptance_tests",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "acceptance_tests",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "ls -la .",
+              "arguments": [],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
