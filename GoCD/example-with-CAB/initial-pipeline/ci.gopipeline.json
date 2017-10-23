@@ -4,7 +4,7 @@
   "group" : "example-with-CAB-initial-pipeline",
   "materials": [
     {
-      "url": "https://manupaisable:X,=Mkf4;K564m,@bitbucket.org/skeltonthatcher/pipeline.git",
+      "url": "https://github.com/arvindsv/gocd-demo-config-repo-code",
       "type": "git"
     }
   ],
