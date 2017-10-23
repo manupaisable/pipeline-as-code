@@ -1,7 +1,7 @@
 {
   "name": "integration-target",
   "environment_variables": [],
-  "group" : "client-example-target-state",
+  "group" : "example-with-infra-team-target-state",
   "materials": [
     {
       "type": "dependency",

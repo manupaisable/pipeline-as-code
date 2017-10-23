@@ -1,13 +1,13 @@
 {
-  "name": "CAB",
+  "name": "staging",
   "environment_variables": [],
-  "group" : "01-current-pipeline-environment-driven",
+  "group" : "example-with-CAB-initial-pipeline",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "UAT",
-      "stage": "user_tests"
+      "pipeline": "CAB",
+      "stage": "CAB_release_schedule"
     }
   ],
   "stages": [
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "name": "CAB_request",
+      "name": "manual_deploy",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
@@ -53,7 +53,7 @@
       "environment_variables": [],
       "jobs": [
         {
-          "name": "CAB_request",
+          "name": "manual_deploy",
           "environment_variables": [],
           "tabs": [],
           "resources": [],
@@ -66,7 +66,7 @@
               "type": "exec",
               "run_if": "passed",
               "on_cancel" : null,
-              "command": "echo 'manually trigger next stage when this action finishes'",
+              "command": "echo 'manually trigger next stage when deploy finished'",
               "arguments": [],
               "working_directory": null
             }
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "name": "CAB_release_schedule",
+      "name": "security_tests",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
@@ -87,7 +87,75 @@
       "environment_variables": [],
       "jobs": [
         {
-          "name": "CAB_release_schedule",
+          "name": "security_tests",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "ls -la .",
+              "arguments": [],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "data_tests",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "approval": {
+          "type": "manual",
+          "users": [],
+          "roles": []
+      },
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "data_tests",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "ls -la .",
+              "arguments": [],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "beta_tests",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "approval": {
+          "type": "manual",
+          "users": [],
+          "roles": []
+      },
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "beta_tests",
           "environment_variables": [],
           "tabs": [],
           "resources": [],

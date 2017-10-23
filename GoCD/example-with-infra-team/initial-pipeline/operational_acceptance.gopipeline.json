@@ -1,7 +1,7 @@
 {
   "name": "operational_acceptance-initial",
   "environment_variables": [],
-  "group" : "client-example-initial-pipeline",
+  "group" : "example-with-infra-team-initial-pipeline",
   "materials": [
     {
       "type": "dependency",

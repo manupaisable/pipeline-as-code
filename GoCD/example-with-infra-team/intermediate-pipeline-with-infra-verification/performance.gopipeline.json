@@ -1,7 +1,7 @@
 {
   "name": "performance",
   "environment_variables": [],
-  "group" : "client-example-intermediate-state-with-dvts",
+  "group" : "example-with-infra-team-intermediate-state-with-dvts",
   "materials": [
     {
       "type": "dependency",

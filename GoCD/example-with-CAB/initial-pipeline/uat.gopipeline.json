@@ -1,23 +1,25 @@
 {
-  "name": "CI",
+  "name": "UAT",
   "environment_variables": [],
-  "group" : "01-current-pipeline-environment-driven",
+  "group" : "example-with-CAB-initial-pipeline",
   "materials": [
     {
-      "url": "https://manupaisable:X,=Mkf4;K564m,@bitbucket.org/skeltonthatcher/pipeline.git",
-      "type": "git"
+      "type": "dependency",
+      "name": "dependency",
+      "pipeline": "CI",
+      "stage": "acceptance_tests"
     }
   ],
   "stages": [
     {
-      "name": "sentinel_gate",
+      "name": "triggered",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
       "environment_variables": [],
       "jobs": [
         {
-          "name": "sentinel_gate",
+          "name": "triggered",
           "environment_variables": [],
           "tabs": [],
           "resources": [],
@@ -30,7 +32,7 @@
               "type": "exec",
               "run_if": "passed",
               "on_cancel" : null,
-              "command": "ls -la .",
+              "command": "echo 'this is just to signal the start of this phase'",
               "arguments": [],
               "working_directory": null
             }
@@ -39,14 +41,53 @@
       ]
     },
     {
-      "name": "acceptance_tests",
+      "name": "manual_deploy",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
+      "approval": {
+          "type": "manual",
+          "users": [],
+          "roles": []
+      },
       "environment_variables": [],
       "jobs": [
         {
-          "name": "acceptance_tests",
+          "name": "manual_deploy",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "properties": [],
+          "run_instance_count": null,
+          "timeout": 0,
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "on_cancel" : null,
+              "command": "echo 'manually trigger next stage when deploy finished'",
+              "arguments": [],
+              "working_directory": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "user_tests",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "approval": {
+          "type": "manual",
+          "users": [],
+          "roles": []
+      },
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "dev_tests",
           "environment_variables": [],
           "tabs": [],
           "resources": [],

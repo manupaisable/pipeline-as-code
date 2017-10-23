@@ -1,7 +1,7 @@
 {
   "name": "QA",
   "environment_variables": [],
-  "group" : "01-current-pipeline-environment-driven",
+  "group" : "example-with-CAB-initial-pipeline",
   "materials": [
     {
       "type": "dependency",

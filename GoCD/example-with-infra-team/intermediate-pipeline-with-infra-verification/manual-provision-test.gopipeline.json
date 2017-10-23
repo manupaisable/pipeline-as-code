@@ -1,7 +1,7 @@
 {
   "name": "manual-provision-test",
   "environment_variables": [],
-  "group" : "client-example-intermediate-state-with-dvts",
+  "group" : "example-with-infra-team-intermediate-state-with-dvts",
   "materials": [
     {
       "url": "https://github.com/arvindsv/gocd-demo-config-repo-code",
