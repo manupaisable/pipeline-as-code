@@ -1,23 +1,30 @@
 {
-  "name": "CI-intermediate-pipeline",
+  "name": "Staging",
   "environment_variables": [],
   "group" : "example-with-CAB-intermediate-pipeline",
   "materials": [
     {
-      "url": "https://github.com/arvindsv/gocd-demo-config-repo-code",
-      "type": "git"
+      "type": "dependency",
+      "name": "dependency",
+      "pipeline": "Acceptance_QA",
+      "stage": "qa_tests"
     }
   ],
   "stages": [
     {
-      "name": "unit_tests",
+      "name": "beta_tests",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
+      "approval": {
+          "type": "manual",
+          "users": [],
+          "roles": []
+      },
       "environment_variables": [],
       "jobs": [
         {
-          "name": "unit_tests",
+          "name": "beta_tests",
           "environment_variables": [],
           "tabs": [],
           "resources": [],

@@ -1,12 +1,12 @@
 {
-  "name": "Acceptance_QA",
+  "name": "Acceptance_QA-intermediate-pipeline",
   "environment_variables": [],
   "group" : "example-with-CAB-intermediate-pipeline",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "CI",
+      "pipeline": "CI-intermediate-pipeline",
       "stage": "unit_tests"
     }
   ],

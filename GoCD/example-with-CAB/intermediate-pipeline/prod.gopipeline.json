@@ -1,12 +1,12 @@
 {
-  "name": "Production",
+  "name": "Production-intermediate-pipeline",
   "environment_variables": [],
   "group" : "example-with-CAB-intermediate-pipeline",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "CAB",
+      "pipeline": "CAB-intermediate-pipeline",
       "stage": "CAB_release_schedule"
     }
   ],

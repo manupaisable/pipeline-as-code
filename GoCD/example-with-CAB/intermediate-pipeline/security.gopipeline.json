@@ -1,18 +1,18 @@
 {
-  "name": "Security",
+  "name": "Security-intermediate-pipeline",
   "environment_variables": [],
   "group" : "example-with-CAB-intermediate-pipeline",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "CI",
+      "pipeline": "CI-intermediate-pipeline",
       "stage": "unit_tests"
     }
   ],
   "stages": [
     {
-      "name": "security_tests",
+      "name": "security_tests-intermediate-pipeline",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
