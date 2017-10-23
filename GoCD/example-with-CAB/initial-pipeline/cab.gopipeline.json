@@ -1,12 +1,12 @@
 {
-  "name": "CAB",
+  "name": "CAB-initial-pipeline",
   "environment_variables": [],
   "group" : "example-with-CAB-initial-pipeline",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "Security",
+      "pipeline": "Security-initial-pipeline",
       "stage": "security_tests"
     }
   ],

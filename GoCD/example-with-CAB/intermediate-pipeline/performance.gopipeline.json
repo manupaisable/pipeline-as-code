@@ -1,25 +1,25 @@
 {
-  "name": "User_Acceptance-initial-pipeline",
+  "name": "Performance",
   "environment_variables": [],
-  "group" : "example-with-CAB-initial-pipeline",
+  "group" : "example-with-CAB-intermediate-pipeline",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "QA-initial-pipeline",
-      "stage": "qa_tests"
+      "pipeline": "User_Acceptance",
+      "stage": "user_tests"
     }
   ],
   "stages": [
     {
-      "name": "user_tests",
+      "name": "performance_tests",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
       "environment_variables": [],
       "jobs": [
         {
-          "name": "user_tests",
+          "name": "performance_tests",
           "environment_variables": [],
           "tabs": [],
           "resources": [],

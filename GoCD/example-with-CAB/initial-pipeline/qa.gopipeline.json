@@ -1,12 +1,12 @@
 {
-  "name": "QA",
+  "name": "QA-initial-pipeline",
   "environment_variables": [],
   "group" : "example-with-CAB-initial-pipeline",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "CI",
+      "pipeline": "CI-initial-pipeline",
       "stage": "unit_tests"
     }
   ],
