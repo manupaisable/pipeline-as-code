@@ -6,8 +6,8 @@
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "CAB",
-      "stage": "CAB_release_schedule"
+      "pipeline": "QA",
+      "stage": "qa_tests"
     }
   ],
   "stages": [

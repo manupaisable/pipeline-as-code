@@ -6,8 +6,8 @@
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "Performance",
-      "stage": "performance_tests"
+      "pipeline": "CI",
+      "stage": "unit_tests"
     }
   ],
   "stages": [

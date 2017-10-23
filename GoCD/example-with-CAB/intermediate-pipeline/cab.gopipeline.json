@@ -6,8 +6,8 @@
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "Security",
-      "stage": "security_tests"
+      "pipeline": "QA",
+      "stage": "qa_tests"
     }
   ],
   "stages": [
