@@ -1,13 +1,13 @@
 {
-  "name": "provision-prod-target",
+  "name": "provision-prod",
   "environment_variables": [],
   "group" : "example-with-infra-team-target-state",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "performance-target",
-      "stage": "performance"
+      "pipeline": "perf",
+      "stage": "perf"
     }
   ],
   "stages": [

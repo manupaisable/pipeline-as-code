@@ -1,5 +1,5 @@
 {
-  "name": "provision-test-target",
+  "name": "provision-test",
   "environment_variables": [],
   "group" : "example-with-infra-team-target-state",
   "materials": [

@@ -1,12 +1,12 @@
 {
-  "name": "integration-target",
+  "name": "integration",
   "environment_variables": [],
   "group" : "example-with-infra-team-target-state",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "provision-test-target",
+      "pipeline": "provision-test",
       "stage": "provision-test"
     }
   ],

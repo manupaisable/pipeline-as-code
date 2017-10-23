@@ -1,12 +1,12 @@
 {
-  "name": "functional-target",
+  "name": "functional",
   "environment_variables": [],
   "group" : "example-with-infra-team-target-state",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "integration-target",
+      "pipeline": "integration",
       "stage": "integration"
     }
   ],

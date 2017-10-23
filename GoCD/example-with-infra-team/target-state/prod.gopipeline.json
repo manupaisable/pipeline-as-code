@@ -1,12 +1,12 @@
 {
-  "name": "prod-target",
+  "name": "prod",
   "environment_variables": [],
   "group" : "example-with-infra-team-target-state",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "operational_acceptance-target",
+      "pipeline": "operational_acceptance",
       "stage": "operational_acceptance"
     }
   ],

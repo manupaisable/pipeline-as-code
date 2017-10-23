@@ -1,18 +1,18 @@
 {
-  "name": "performance-target",
+  "name": "perf",
   "environment_variables": [],
   "group" : "example-with-infra-team-target-state",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "functional-target",
+      "pipeline": "functional",
       "stage": "functional"
     }
   ],
   "stages": [
     {
-      "name": "performance",
+      "name": "perf",
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
