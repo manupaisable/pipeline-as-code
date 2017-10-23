@@ -1,12 +1,12 @@
 {
-  "name": "performance",
+  "name": "performance-intermediate",
   "environment_variables": [],
   "group" : "example-with-infra-team-intermediate-state-with-dvts",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "functional",
+      "pipeline": "functional-intermediate",
       "stage": "functional"
     }
   ],

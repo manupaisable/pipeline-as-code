@@ -1,12 +1,12 @@
 {
-  "name": "test-infra-verification",
+  "name": "test-infra-verification-intermediate",
   "environment_variables": [],
   "group" : "example-with-infra-team-intermediate-state-with-dvts",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "manual-provision-test",
+      "pipeline": "manual-provision-test-intermediate",
       "stage": "manual-provision-test"
     }
   ],

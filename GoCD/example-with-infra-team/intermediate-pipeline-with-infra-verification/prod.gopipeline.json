@@ -1,12 +1,12 @@
 {
-  "name": "prod",
+  "name": "prod-intermediate",
   "environment_variables": [],
   "group" : "example-with-infra-team-intermediate-state-with-dvts",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "operational_acceptance",
+      "pipeline": "operational_acceptance-intermediate",
       "stage": "operational_acceptance"
     }
   ],

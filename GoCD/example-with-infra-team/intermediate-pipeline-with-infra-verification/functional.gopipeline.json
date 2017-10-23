@@ -1,12 +1,12 @@
 {
-  "name": "functional",
+  "name": "functional-intermediate",
   "environment_variables": [],
   "group" : "example-with-infra-team-intermediate-state-with-dvts",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "integration",
+      "pipeline": "integration-intermediate",
       "stage": "integration"
     }
   ],

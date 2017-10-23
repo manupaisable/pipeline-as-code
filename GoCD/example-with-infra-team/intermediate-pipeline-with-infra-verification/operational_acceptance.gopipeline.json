@@ -1,12 +1,12 @@
 {
-  "name": "operational_acceptance",
+  "name": "operational_acceptance-intermediate",
   "environment_variables": [],
   "group" : "example-with-infra-team-intermediate-state-with-dvts",
   "materials": [
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "prod-infra-verification",
+      "pipeline": "prod-infra-verification-intermediate",
       "stage": "prod-infra-verification"
     }
   ],
