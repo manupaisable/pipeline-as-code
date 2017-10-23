@@ -6,8 +6,8 @@
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "UAT",
-      "stage": "user_tests"
+      "pipeline": "Security",
+      "stage": "security_tests"
     }
   ],
   "stages": [

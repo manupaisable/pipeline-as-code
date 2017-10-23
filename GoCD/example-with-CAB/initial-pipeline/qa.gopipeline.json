@@ -16,11 +16,6 @@
       "fetch_materials": true,
       "never_cleanup_artifacts": false,
       "clean_working_directory": false,
-      "approval": {
-          "type": "manual",
-          "users": [],
-          "roles": []
-      },
       "environment_variables": [],
       "jobs": [
         {
