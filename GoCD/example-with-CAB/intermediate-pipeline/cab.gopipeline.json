@@ -6,7 +6,7 @@
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "QA",
+      "pipeline": "Acceptance_QA",
       "stage": "qa_tests"
     }
   ],
