@@ -6,8 +6,8 @@
     {
       "type": "dependency",
       "name": "dependency",
-      "pipeline": "Staging",
-      "stage": "beta_tests"
+      "pipeline": "CAB",
+      "stage": "CAB_release_schedule"
     }
   ],
   "stages": [
